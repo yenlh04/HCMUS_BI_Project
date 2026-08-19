@@ -42,8 +42,25 @@ Các video bao gồm:
 
 #### 4. Trực quan hóa dữ liệu (Dashboard)
 - Xây dựng báo cáo động trên **Power BI** với các tính năng phân tích chi tiết.
+
 - **Dashboard Quản lý (Tổng quan hiệu suất):** Giám sát hiệu suất toàn ngành (tổng chuyến bay, tỉ lệ hủy, delay nghiêm trọng), top hiệu suất theo hãng và sân bay.
+  
+  ![Tổng quan hiệu suất 1](PowerBI_Dasboard/images/TQHS_1.png)
+  ![Tổng quan hiệu suất 2](PowerBI_Dasboard/images/TQHS_2.png)
+  ![Tổng quan hiệu suất 3](PowerBI_Dasboard/images/TQHS_3.png)
+  ![Tổng quan hiệu suất 4](PowerBI_Dasboard/images/TQHS_4.png)
+  ![Tổng quan hiệu suất 5](PowerBI_Dasboard/images/TQHS_5.png)
+  
+  **Hiệu suất sân bay:**
+  
+  ![Hiệu suất sân bay](PowerBI_Dasboard/images/HSSB.png)
+
 - **Dashboard Phân tích nguyên nhân:** Đào sâu vào nguyên nhân trễ chuyến và hủy chuyến theo khung giờ, tính mùa vụ và đánh giá mức độ đóng góp của từng sân bay vào việc chậm trễ.
+  
+  ![Phân tích nguyên nhân 1](PowerBI_Dasboard/images/PTNN_1.png)
+  ![Phân tích nguyên nhân 2](PowerBI_Dasboard/images/PTNN_2.png)
+  ![Phân tích nguyên nhân 3](PowerBI_Dasboard/images/PTNN_3.png)
+
 - **AI Tích hợp:** Ứng dụng tính năng *Smart Narrative* của Power BI để tự động phân tích và diễn giải số liệu biểu đồ thành Insight bằng ngôn ngữ tự nhiên.
 
 #### 5. Khai phá dữ liệu (Data Mining)
