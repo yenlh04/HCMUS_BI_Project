@@ -1,0 +1,180 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\BI Proj Airlines DDS.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Date.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Time.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Time.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Cancellation Reasons.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Cancellation Reasons.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airlines.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Airlines.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airports.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Airports.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Aircrafts.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{64848DD7-23E8-56F8-1A89-BD2A7BC2463A}|Project_OLAP_Fianl\\Project_OLAP_Fianl.dwproj|solutionrelative:Project_OLAP_Fianl\\Dim Aircrafts.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1924764005:0:{13143d73-808b-4a2f-bebb-ccbe9c93fe37}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a83394e3-39c2-4678-a3c8-364b69d78fd3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BI Proj Airlines DDS.cube [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.cube",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\BI Proj Airlines DDS.cube",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.cube [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\BI Proj Airlines DDS.cube [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:35:21.782Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dim Time.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Time.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Time.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Time.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Time.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:35:02.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dim Cancellation Reasons.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Cancellation Reasons.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Cancellation Reasons.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Cancellation Reasons.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Cancellation Reasons.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:34:16.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Dim Airlines.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airlines.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Airlines.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airlines.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Airlines.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:33:31.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dim Airports.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airports.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Airports.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Airports.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Airports.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:33:12.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dim Aircrafts.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Aircrafts.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Aircrafts.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Aircrafts.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Aircrafts.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:31:38.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BI Proj Airlines DDS.dsv [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\BI Proj Airlines DDS.dsv [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:30:16.694Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dim Date.dim [Design]",
+              "DocumentMoniker": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Date.dim",
+              "RelativeDocumentMoniker": "Project_OLAP_Fianl\\Dim Date.dim",
+              "ToolTip": "D:\\hoc tap\\HK10-N4\\HTTTPV_BI\\Proj\\Project_OLAP_Fianl\\Project_OLAP_Fianl\\Dim Date.dim [Design]",
+              "RelativeToolTip": "Project_OLAP_Fianl\\Dim Date.dim [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-29T17:34:32.731Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6d52cee1-a15c-42fd-8d30-faacc8d1dd02}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

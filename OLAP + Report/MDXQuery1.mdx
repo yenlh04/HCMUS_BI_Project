@@ -1,0 +1,135 @@
+﻿-- Truy vấn tổng số chuyến bay theo tháng, quý, năm. 
+SELECT 
+    NON EMPTY { [Measures].[Fact Flights Count] } ON COLUMNS, 
+    NON EMPTY { 
+        (
+            [Dim Date].[Year].[Year].ALLMEMBERS * [Dim Date].[Quarter].[Quarter].ALLMEMBERS * [Dim Date].[Month].[Month].ALLMEMBERS 
+        ) 
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [BI Proj Airlines DDS]
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Top 5 sân bay bận rộn nhất (có nhiều chuyến bay đi và đến nhất). 
+	-- 1. Chuyen bay di (Origin)
+SELECT 
+    NON EMPTY { [Measures].[Fact Flights Count] } ON COLUMNS, 
+    NON EMPTY { 
+        ORDER(
+            [Origin Airport SK].[Airport SK].[Airport SK].ALLMEMBERS, 
+            [Measures].[Fact Flights Count], 
+            BDESC
+        ) 
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [BI Proj Airlines DDS] 
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+-- 2. Chuyen bay den (Destination)
+SELECT 
+    NON EMPTY { [Measures].[Fact Flights Count] } ON COLUMNS, 
+    NON EMPTY { 
+        ORDER(
+            [Destination Airport SK].[Airport SK].[Airport SK].ALLMEMBERS, 
+            [Measures].[Fact Flights Count], 
+            BDESC
+        ) 
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [BI Proj Airlines DDS] 
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+-- Tỉ lệ chuyến bay đúng giờ (On-Time Performance - OTP) ± 5 theo sân bay. 
+ SELECT NON EMPTY { [Measures].[OTP Rate] } ON COLUMNS, 
+ NON EMPTY { ([Origin Airport SK].[Airport SK].[Airport SK].ALLMEMBERS ) } 
+ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Tỉ lệ hủy chuyến theo nguyên nhân. 
+  SELECT NON EMPTY { [Measures].[Cancellation Rate] } ON COLUMNS, 
+  NON EMPTY { ([Dim Cancellation Reasons].[Reason SK].[Reason SK].ALLMEMBERS ) } 
+  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+  CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+  -- Trung bình thời gian delay theo sân bay đi/đến 
+	-- San bay đi (Origin) + Dept Delay
+  SELECT NON EMPTY { [Measures].[Avg Dept Delay] } ON COLUMNS, 
+  NON EMPTY { ([Origin Airport SK].[Airport SK].[Airport SK].ALLMEMBERS ) } 
+  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+  CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+	-- San bay den (Dest) + Arr Delay
+  SELECT NON EMPTY { [Measures].[Avg Arr Delay] } ON COLUMNS, 
+  NON EMPTY { ([Destination Airport SK].[Airport SK].[Airport SK].ALLMEMBERS ) } 
+  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+  CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+-- Tổng số chuyến bay, OTP toàn ngành. 
+ SELECT NON EMPTY { [Measures].[Fact Flights Count], [Measures].[OTP Plus Minus5 Flag] } ON COLUMNS 
+ FROM [BI Proj Airlines DDS] 
+ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Tỉ lệ chuyến bị hủy, tỉ lệ delay > 15 phút.
+  SELECT NON EMPTY { [Measures].[Cancellation Rate], [Measures].[Delay Over 15 Rate] } ON COLUMNS 
+  FROM [BI Proj Airlines DDS] 
+  CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+  -- Top 5 hãng hàng không theo OTP. 
+  SELECT 
+    NON EMPTY { 
+        [Measures].[OTP Rate], 
+        [Measures].[OTP Plus Minus5 Flag] 
+    } ON COLUMNS, 
+    NON EMPTY { 
+        ORDER(
+            [Dim Airlines].[Airline SK].[Airline SK].ALLMEMBERS, 
+            [Measures].[OTP Rate],                               
+            BDESC                                                
+        ) 
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+ FROM [BI Proj Airlines DDS] 
+ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Top 5 sân bay có tỉ lệ delay cao nhất. 
+SELECT 
+    NON EMPTY { [Measures].[Delay Over 15 Rate] } ON COLUMNS, 
+    NON EMPTY { 
+        ORDER(
+            [Origin Airport SK].[Airport SK].[Airport SK].ALLMEMBERS, 
+            [Measures].[Delay Over 15 Rate],                          
+            BDESC                                                     
+        ) 
+    } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS 
+FROM [BI Proj Airlines DDS] 
+CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+-- Xu hướng số chuyến bay theo tháng/quý.
+ SELECT NON EMPTY { [Measures].[Fact Flights Count] } ON COLUMNS, 
+ NON EMPTY { ([Dim Date].[Quarter].[Quarter].ALLMEMBERS * [Dim Date].[Month].[Month].ALLMEMBERS ) } 
+ DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+ CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Nguyên nhân delay 
+  SELECT NON EMPTY { [Measures].[Air System Delay], [Measures].[Airline Delay], [Measures].[Late Aircraft Delay], 
+	[Measures].[Security Delay], [Measures].[Weather Delay] } 
+	ON COLUMNS FROM [BI Proj Airlines DDS] 
+	CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Thời gian delay trung bình theo nguyên nhân
+  SELECT NON EMPTY { [Measures].[Avg Air Systemr Delay], [Measures].[Avg Airline Delay], 
+	[Measures].[Avg Late Aircraft Delay], [Measures].[Avg Security Delay], [Measures].[Avg Weather Delay] } 
+	ON COLUMNS FROM [BI Proj Airlines DDS] 
+	CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+ -- Xu hướng delay theo tháng/mùa
+  SELECT NON EMPTY { [Measures].[Delay Over 15 Rate], [Measures].[Avg Arr Delay], [Measures].[Avg Dept Delay] } ON COLUMNS, 
+  NON EMPTY { ([Dim Date].[Season].[Season].ALLMEMBERS * [Dim Date].[Month].[Month].ALLMEMBERS ) } 
+  DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+  CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+  -- Delay theo khung giờ bay 
+   SELECT NON EMPTY { [Measures].[Delay Over 15 Rate], [Measures].[Avg Arr Delay], [Measures].[Avg Dept Delay] } ON COLUMNS, 
+   NON EMPTY { ([Departure Time SK].[Hour Of Day].[Hour Of Day].ALLMEMBERS ) } 
+   DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+   CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
+
+   -- Top sân bay đóng góp nhiều nhất vào delay/hủy
+   SELECT NON EMPTY { [Measures].[Pct Contribution To Cancel], [Measures].[Pct Contribution To Delay] } ON COLUMNS, 
+   NON EMPTY { ([Origin Airport SK].[Airport SK].[Airport SK].ALLMEMBERS ) } 
+   DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [BI Proj Airlines DDS] 
+   CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS
